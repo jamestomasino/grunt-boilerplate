@@ -4,7 +4,7 @@ cd $LOCAL_DIR
 
 # Only staged and committed files should be tested
 # Stash while testing, then pop
-git stash -u --keep-index
+git stash -u --keep-index --include-untracked
 grunt lint
 git reset --hard
 git stash pop --quiet --index
