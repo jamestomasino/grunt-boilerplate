@@ -2,12 +2,7 @@
 LOCAL_DIR=$(git rev-parse --show-toplevel)
 cd $LOCAL_DIR
 
-# Only staged and committed files should be tested
-# Stash while testing, then pop
-git stash -u --keep-index --include-untracked
 grunt lint
-git reset --hard
-git stash pop --quiet --index
 
 #Create README.md of the commit messages as a daily changelog
 README="$LOCAL_DIR/README.md"
