@@ -40,7 +40,7 @@
 			$.proxy(this._onDataDone, this),
 			$.proxy(this._onDataFail, this)
 		);
-	}
+	};
 
 	/**
 	 * Sample method
@@ -48,7 +48,7 @@
 	 */
 	p.sampleMethod = function () {
 		Events.trigger ( CONST.DATA_EVENT_NAME_1, "sample_param" );
-	}
+	};
 
 
 	//---------------------------------------------------------------
@@ -62,7 +62,7 @@
 	 */
 	p.setApplicationMode = function ( mode ) {
 		this._applicationMode = mode;
-	}
+	};
 
 	/**
 	 * Get application mode
@@ -70,7 +70,7 @@
 	 */
 	p.getApplicationMode = function () {
 		return this._applicationMode;
-	}
+	};
 
 
 	//---------------------------------------------------------------
