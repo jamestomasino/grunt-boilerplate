@@ -5,16 +5,16 @@ cd $LOCAL_DIR
 # Lint stuff before committing
 grunt lint
 
-# Create README.md of the commit messages as a daily changelog
-README="$LOCAL_DIR/README.md"
-echo "CHANGELOG" > $README
-echo ---------------------- >> $README
-git log --no-merges --format="%cd" --date=short | sort -u -r | while read DATE ; do
-	echo >> $README
-	echo -e "####$DATE####" >> $README
-	echo >> $README
-    GIT_PAGER=cat git log --no-merges --format=" * %s (\`%an\`)" --since="$DATE 00:00:00" --until="$DATE 09:00:00" >> $README
-    GIT_PAGER=cat git log --no-merges --format=" * __%s__ (\`%an\`)" --since="$DATE 09:00:01" --until="$DATE 17:30:00" >> $README
-    GIT_PAGER=cat git log --no-merges --format=" * %s (\`%an\`)" --since="$DATE 17:30:01" --until="$DATE 24:00:00" >> $README
-done
-git add $README
+ #Create README.md of the commit messages as a daily changelog
+#README="$LOCAL_DIR/README.md"
+#echo "CHANGELOG" > $README
+#echo ---------------------- >> $README
+#git log --no-merges --format="%cd" --date=short | sort -u -r | while read DATE ; do
+	#echo >> $README
+	#echo -e "####$DATE####" >> $README
+	#echo >> $README
+	#GIT_PAGER=cat git log --no-merges --format=" * %s (\`%an\`)" --since="$DATE 00:00:00" --until="$DATE 09:00:00" >> $README
+	#GIT_PAGER=cat git log --no-merges --format=" * __%s__ (\`%an\`)" --since="$DATE 09:00:01" --until="$DATE 17:30:00" >> $README
+	#GIT_PAGER=cat git log --no-merges --format=" * %s (\`%an\`)" --since="$DATE 17:30:01" --until="$DATE 24:00:00" >> $README
+#done
+#git add $README
