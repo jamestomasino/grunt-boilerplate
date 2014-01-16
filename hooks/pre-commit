@@ -1,0 +1,6 @@
+#!/bin/bash
+LOCAL_DIR=$(git rev-parse --show-toplevel)
+cd $LOCAL_DIR
+
+# Lint stuff before committing
+grunt lint
