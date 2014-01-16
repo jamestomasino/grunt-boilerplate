@@ -3,6 +3,7 @@ CHANGELOG
 
 ####2014-01-16####
 
+ * __reverting. README is always 1 commit behind presently__ (`James Tomasino`)
  * __attempting to insert updated readme on post-commit hook__ (`James Tomasino`)
  * __added auto-generated readme changelog__ (`James Tomasino`)
  * __adding pre-commit hook__ (`James Tomasino`)
