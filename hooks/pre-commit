@@ -5,7 +5,7 @@ cd $LOCAL_DIR
 # Lint stuff before committing
 grunt lint
 
- #Create README.md of the commit messages as a daily changelog
+#Create README.md of the commit messages as a daily changelog
 #README="$LOCAL_DIR/README.md"
 #echo "CHANGELOG" > $README
 #echo ---------------------- >> $README
