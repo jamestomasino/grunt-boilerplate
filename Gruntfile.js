@@ -106,3 +106,5 @@ module.exports = function(grunt) {
 	grunt.registerTask('travis', ['jshint', 'jsonlint','qunit']);
 
 };
+
+aoeu {/1220}
