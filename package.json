@@ -1,9 +1,9 @@
 {
-  "name": "curves",
-  "description": "Tool to automatically calculate grades on a curve",
+  "name": "boilerplate",
+  "description": "A boilerplate for starting projects with a grunt workflow",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jamestomasino/curves"
+    "url": "https://github.com/jamestomasino/grunt-boilerplate"
   },
   "version": "0.1.0",
   "devDependencies": {
