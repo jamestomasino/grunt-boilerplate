@@ -1,8 +1,15 @@
-##CHANGELOG##
+# Grunt Boilerplate #
+
+## Overview ##
+
+Overview of grunt-boilerplate.
+
+###CHANGELOG###
 ----------------------
 
 ####2014-01-17####
 
+ * __properly stripping old changelog from file and replacing it now__ (`James Tomasino`)
  * __changelog only regenerates at end of readme__ (`James Tomasino`)
 
 ####2014-01-16####
