@@ -80,6 +80,7 @@ The `pre-commit` hook that is bundled in the boilerplate requires all commits to
 
 ####2014-01-17####
 
+ * __added lots to the readme__ (`James Tomasino`)
  * __adding exit from pre-commit hook if linting fails, before readme updated__ (`James Tomasino`)
  * __adding exit from pre-commit hook if linting fails, before readme updated__ (`James Tomasino`)
  * __adding exit from pre-commit hook if linting fails, before readme updated__ (`James Tomasino`)
