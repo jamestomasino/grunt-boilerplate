@@ -78,6 +78,10 @@ The `pre-commit` hook that is bundled in the boilerplate requires all commits to
 
 ## COMMIT LOG ##
 
+####2014-01-30####
+
+ * __added global setup script to simlink global node modules and ignore them__ (`James Tomasino`)
+
 ####2014-01-17####
 
  * __added lots to the readme__ (`James Tomasino`)
