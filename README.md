@@ -80,6 +80,7 @@ The `pre-commit` hook that is bundled in the boilerplate requires all commits to
 
 ####2014-01-30####
 
+ * __setup_global reads from package.json__ (`James Tomasino`)
  * __added global setup script to simlink global node modules and ignore them__ (`James Tomasino`)
 
 ####2014-01-17####

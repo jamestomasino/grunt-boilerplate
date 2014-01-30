@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # read dependencies from package.json and install globally
-awk '/ependencies\"\:/{a=1;next}/\}/{a=0}a' package.json | awk ' { print $1 }' | sed -n 's/[":"]*//pg' | while read -r line; do
+awk '/ependencies\"\:/{a=1;next}/\}/{a=0}a' package.json | awk ' { print $1 }' | sed -n 's/[":"]//pg' | while read -r line; do
 	npm install -g $line
 done
 
