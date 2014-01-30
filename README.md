@@ -11,15 +11,23 @@ The grunt-boilerplate is a sample project with grunt automation tasks to serve a
 - *[nodejs](http://nodejs.org/)* - Use a package installer, homebrew, whatever
 - *grunt-cli* - `npm install -g grunt-cli`
 - (Optional) *Live-Reload Plugin* - Update your browser on code changes
-	- [Chrome Plugin](https://chrome.google.com/webstore/detail/jnihajbhpnppcggbcgedagnkighmdlei)
+	- [Chrome Plugin](https://chrome.google.com/webstore/detail/	jnihajbhpnppcggbcgedagnkighmdlei)
 	- [Safari Plugin](https://github.com/downloads/mockko/livereload/LiveReload-1.6.2.safariextz)
 	- [Firefox Plugin](https://addons.mozilla.org/firefox/addon/livereload/)
 	- IE Plugin - Why are you developing in IE?
 
 ### Installation ###
 
+Standard:
+
 - Clone the repo
 - Run `npm install` in the root folder
+- Run `grunt` once to set up all your hooks
+
+Or, to install all the node modules globally:
+
+- Clone the repo
+- Run `./setup_global` in the root folder
 - Run `grunt` once to set up all your hooks
 
 ## Components ##
@@ -80,6 +88,7 @@ The `pre-commit` hook that is bundled in the boilerplate requires all commits to
 
 ####2014-01-30####
 
+ * __cleaning up unnecessary *__ (`James Tomasino`)
  * __setup_global reads from package.json__ (`James Tomasino`)
  * __added global setup script to simlink global node modules and ignore them__ (`James Tomasino`)
 
