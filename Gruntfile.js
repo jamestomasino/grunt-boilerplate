@@ -49,7 +49,7 @@ module.exports = function(grunt) {
 		meta: {
 			buildDirectory: 'js',
 			header: '',
-			footer: '',
+			footer: ''
 		},
 		snockets: {
 			core: {
