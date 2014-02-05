@@ -4,7 +4,7 @@ module.exports = function(grunt) {
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
 		qunit: {
-			files: ['tests/*.html'],
+			files: ['tests/*.html']
 		},
 		jsonlint: {
 			scripts: {
