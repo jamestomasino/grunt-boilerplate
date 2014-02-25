@@ -36,10 +36,14 @@ if grunt lint; then
 		GIT_PAGER=cat git log --no-merges --format=" * __%s__ (\`%an\`)" --since="$DATE 09:00:01" --until="$DATE 17:30:00" >> $CHANGELOG
 		GIT_PAGER=cat git log --no-merges --format=" * %s (\`%an\`)" --since="$DATE 17:30:01" --until="$DATE 24:00:00" >> $CHANGELOG
 	done
-	git add $CHANGELOG
 
 	######## README ###########
 	cat $TODO >> $README
 	cat $CHANGELOG >> $README
+
+	######## UPDATE GIT ###########
+	git add $CHANGELOG
+	git add $TODO
+	git add $README
 
 fi
