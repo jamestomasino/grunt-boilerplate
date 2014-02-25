@@ -91,6 +91,7 @@ The `pre-commit` hook that is bundled in the boilerplate requires all commits to
 
 ####2014-02-25####
 
+ * __git should update redame todo and changelog on commit__ (`James Tomasino`)
  * __adding todo.md__ (`James Tomasino`)
  * __adding todo section__ (`James Tomasino`)
  * __adding TODO.md and CHANGELOG.md to project__ (`James Tomasino`)

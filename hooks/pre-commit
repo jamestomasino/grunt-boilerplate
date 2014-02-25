@@ -23,7 +23,7 @@ if grunt lint; then
 
 	######## TO DO #########
 	echo "## TODO ##" > $TODO
-	todos >> $TODO
+	$(todos >> $TODO)
 
 	######## CHANGELOG #########
 	# Add a daily breakdown of commits to the project as a changelog to the CHANGELOG
