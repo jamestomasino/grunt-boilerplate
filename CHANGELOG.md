@@ -2,6 +2,7 @@
 
 ####2014-02-25####
 
+ * __formatting todo function for proper output__ (`James Tomasino`)
  * __git should update redame todo and changelog on commit__ (`James Tomasino`)
  * __adding todo.md__ (`James Tomasino`)
  * __adding todo section__ (`James Tomasino`)

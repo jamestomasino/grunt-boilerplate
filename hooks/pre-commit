@@ -1,13 +1,8 @@
 #!/bin/bash
 LOCAL_DIR=$(git rev-parse --show-toplevel)
+LOCAL_DIR=${LOCAL_DIR:-.}
 cd $LOCAL_DIR
 
-function todos {
-	#local m=$(trimspace $(git diff --numstat 2> /dev/null | wc -l))
-	LOCAL_DIR=$(git rev-parse --show-toplevel 2> /dev/null)
-	LOCAL_DIR=${LOCAL_DIR:-.}
-	find ${LOCAL_DIR} -type f -exec grep -H -n '(TODO|FIX(ME)?):' {} \; 2> /dev/null 
-}
 
 # Require good linting to commit
 # exit if task failed
@@ -23,7 +18,8 @@ if grunt lint; then
 
 	######## TO DO #########
 	echo "## TODO ##" > $TODO
-	$(todos >> $TODO)
+	find ${LOCAL_DIR} -type f -exec grep -H '(TODO|FIX(ME)?):' {} \; 2> /dev/null | grep -v -e TODO.md -e README.md -e pre-commit | awk '{for (i=1; i<=NF-1; i++) $i = $(i+1); NF-=1; print}'
+	echo ""
 
 	######## CHANGELOG #########
 	# Add a daily breakdown of commits to the project as a changelog to the CHANGELOG
