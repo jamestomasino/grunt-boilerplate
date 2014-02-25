@@ -2,6 +2,7 @@
 
 ####2014-02-25####
 
+ * __adding todo line for demo purposes in readme__ (`James Tomasino`)
  * __forgot to pipe to file__ (`James Tomasino`)
  * __fixing grep to ignore these files im creating__ (`James Tomasino`)
  * __formatting todo function for proper output__ (`James Tomasino`)
