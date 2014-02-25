@@ -18,8 +18,8 @@ if grunt lint; then
 
 	######## TO DO #########
 	echo "## TODO ##" > $TODO
-	find ${LOCAL_DIR} -type f -exec grep -H '(TODO|FIX(ME)?):' {} \; 2> /dev/null | grep -v -e TODO.md -e README.md -e pre-commit | awk '{for (i=1; i<=NF-1; i++) $i = $(i+1); NF-=1; print}'
-	echo ""
+	find ${LOCAL_DIR} -type f -exec grep -H '(TODO|FIX(ME)?):' {} \; 2> /dev/null | grep -v -e TODO.md -e README.md -e pre-commit | awk '{for (i=1; i<=NF-1; i++) $i = $(i+1); NF-=1; print}' >> $TODO
+	echo "" >> $TODO
 
 	######## CHANGELOG #########
 	# Add a daily breakdown of commits to the project as a changelog to the CHANGELOG
