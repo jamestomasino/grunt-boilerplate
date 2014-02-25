@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# read dependencies from package.json and install globally
+awk '/ependencies\"\:/{a=1;next}/\}/{a=0}a' package.json | awk ' { print $1 }' | sed -n 's/[":"]//pg' | while read -r line; do
+	npm install -g $line
+done
+
+# simlink global node_modules folder to local project
+if [ -d "`npm config get prefix`/node_modules" ]; then
+	ln -s "`npm config get prefix`/node_modules" node_modules
+elif [ -d "`npm config get prefix`/lib/node_modules" ]; then
+	ln -s "`npm config get prefix`/lib/node_modules" node_modules
+fi

@@ -7,6 +7,7 @@ function SampleClass_setup () { }
 // Teardown things after each test
 function SampleClass_teardown () { }
 
+// TODO: Add unit tests
 function SampleClass_method () {
 	equal ( true, true );
 }

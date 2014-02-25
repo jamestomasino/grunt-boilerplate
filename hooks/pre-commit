@@ -1,25 +1,47 @@
 #!/bin/bash
 LOCAL_DIR=$(git rev-parse --show-toplevel)
+LOCAL_DIR=${LOCAL_DIR:-.}
 cd $LOCAL_DIR
+
+# Define tab character to get around sed limitation
+TAB=$'\t'
 
 # Require good linting to commit
 # exit if task failed
 if grunt lint; then
 
-	# Create README.md of the commit messages as a daily changelog
+	# File References
 	README="$LOCAL_DIR/README.md"
-	# Clear the contents from CHANGELOG to the end of file and prepare for appending
-	sed -i "" -e '/##\ COMMIT\ LOG\ ##/,$ d' $README
-	# Add a daily breakdown of commits to the project as a changelog to the README
-	echo "## COMMIT LOG ##" >> $README
+	CHANGELOG="$LOCAL_DIR/CHANGELOG.md"
+	TODO="$LOCAL_DIR/TODO.md"
+
+	# Clear the contents from TO DO to the end of file and prepare for appending
+	sed -i "" -e '/##\ TODO\ ##/,$ d' $README
+
+	######## TO DO #########
+	echo "## TODO ##" > $TODO
+	find ${LOCAL_DIR} -type f -exec grep -H 'TODO:' {} \; 2> /dev/null | grep -v -e TODO.md -e README.md -e pre-commit | awk '{for (i=1; i<=NF-1; i++) $i = $(i+1); NF-=1; print}' | sed -e "s/TODO:[ ${TAB}]*//" >> $TODO
+	echo "" >> $TODO
+
+	######## CHANGELOG #########
+	# Add a daily breakdown of commits to the project as a changelog to the CHANGELOG
+	echo "## COMMIT LOG ##" > $CHANGELOG
 	git log --no-merges --format="%cd" --date=short | sort -u -r | while read DATE ; do
-		echo >> $README
-		echo -e "####$DATE####" >> $README
-		echo >> $README
-		GIT_PAGER=cat git log --no-merges --format=" * %s (\`%an\`)" --since="$DATE 00:00:00" --until="$DATE 09:00:00" >> $README
-		GIT_PAGER=cat git log --no-merges --format=" * __%s__ (\`%an\`)" --since="$DATE 09:00:01" --until="$DATE 17:30:00" >> $README
-		GIT_PAGER=cat git log --no-merges --format=" * %s (\`%an\`)" --since="$DATE 17:30:01" --until="$DATE 24:00:00" >> $README
+		echo >> $CHANGELOG
+		echo -e "####$DATE####" >> $CHANGELOG
+		echo >> $CHANGELOG
+		GIT_PAGER=cat git log --no-merges --format=" * %s (\`%an\`)" --since="$DATE 00:00:00" --until="$DATE 09:00:00" >> $CHANGELOG
+		GIT_PAGER=cat git log --no-merges --format=" * __%s__ (\`%an\`)" --since="$DATE 09:00:01" --until="$DATE 17:30:00" >> $CHANGELOG
+		GIT_PAGER=cat git log --no-merges --format=" * %s (\`%an\`)" --since="$DATE 17:30:01" --until="$DATE 24:00:00" >> $CHANGELOG
 	done
+
+	######## README ###########
+	cat $TODO >> $README
+	cat $CHANGELOG >> $README
+
+	######## UPDATE GIT ###########
+	git add $CHANGELOG
+	git add $TODO
 	git add $README
 
 fi

@@ -16,6 +16,6 @@
 	CONST.DATA_EVENT_NAME_1 = 'DATA_EVENT_NAME_1';
 
 	// CONFIGURATION
-	CONST.UI_BIND_TYPE            = 'touchend click';
+	CONST.UI_BIND_TYPE      = 'touchend click';
 
 }(window));
