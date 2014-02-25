@@ -1,31 +1,13 @@
 ## COMMIT LOG ##
 
-####2014-02-25####
+####2014-02-11####
 
- * __adding todo line for demo purposes in readme__ (`James Tomasino`)
- * __forgot to pipe to file__ (`James Tomasino`)
- * __fixing grep to ignore these files im creating__ (`James Tomasino`)
- * __formatting todo function for proper output__ (`James Tomasino`)
- * __git should update redame todo and changelog on commit__ (`James Tomasino`)
- * __adding todo.md__ (`James Tomasino`)
- * __adding todo section__ (`James Tomasino`)
- * __adding TODO.md and CHANGELOG.md to project__ (`James Tomasino`)
- * simplified todo search pattern (`James Tomasino`)
-
-####2014-01-31####
-
-
-####2014-01-30####
-
- * __updated readme__ (`James Tomasino`)
- * __cleaning up unnecessary *__ (`James Tomasino`)
- * __setup_global reads from package.json__ (`James Tomasino`)
- * __added global setup script to simlink global node modules and ignore them__ (`James Tomasino`)
- * fixed typo in const (`James Tomasino`)
+ * typo in CONST UI_BIND_TYPE var (`James Tomasino`)
 
 ####2014-01-17####
 
  * __added lots to the readme__ (`James Tomasino`)
+ * __Create README.md__ (`Aiden M`)
  * __adding exit from pre-commit hook if linting fails, before readme updated__ (`James Tomasino`)
  * __adding exit from pre-commit hook if linting fails, before readme updated__ (`James Tomasino`)
  * __adding exit from pre-commit hook if linting fails, before readme updated__ (`James Tomasino`)
