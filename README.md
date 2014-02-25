@@ -90,6 +90,7 @@ The `pre-commit` hook that is bundled in the boilerplate requires all commits to
 
 ####2014-02-25####
 
+ * __forgot to pipe to file__ (`James Tomasino`)
  * __fixing grep to ignore these files im creating__ (`James Tomasino`)
  * __formatting todo function for proper output__ (`James Tomasino`)
  * __git should update redame todo and changelog on commit__ (`James Tomasino`)
