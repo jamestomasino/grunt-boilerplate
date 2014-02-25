@@ -10,6 +10,7 @@
  * __adding todo.md__ (`James Tomasino`)
  * __adding todo section__ (`James Tomasino`)
  * __adding TODO.md and CHANGELOG.md to project__ (`James Tomasino`)
+ * simplified todo search pattern (`James Tomasino`)
 
 ####2014-01-31####
 

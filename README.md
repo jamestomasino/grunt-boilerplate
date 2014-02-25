@@ -85,7 +85,7 @@ This means that you can add as many hooks directly into your repo as you like, a
 The `pre-commit` hook that is bundled in the boilerplate requires all commits to pass the `grunt lint` task, which ensures all javascript and json files are properly formatted. Once that is complete, the hook edits this `README.md` file, stripping the _COMMIT LOG_ below, and updating it with a daily breakdown of commits made to the project. Due to limitations of `pre-commit` hooks, the only thing left out from this list will be the most recent commit message.
 
 ## TODO ##
-TODO: Add unit tests
+Add unit tests
 
 ## COMMIT LOG ##
 
@@ -99,6 +99,7 @@ TODO: Add unit tests
  * __adding todo.md__ (`James Tomasino`)
  * __adding todo section__ (`James Tomasino`)
  * __adding TODO.md and CHANGELOG.md to project__ (`James Tomasino`)
+ * simplified todo search pattern (`James Tomasino`)
 
 ####2014-01-31####
 

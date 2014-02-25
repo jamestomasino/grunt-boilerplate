@@ -3,6 +3,8 @@ LOCAL_DIR=$(git rev-parse --show-toplevel)
 LOCAL_DIR=${LOCAL_DIR:-.}
 cd $LOCAL_DIR
 
+# Define tab character to get around sed limitation
+TAB=$'\t'
 
 # Require good linting to commit
 # exit if task failed
@@ -18,7 +20,7 @@ if grunt lint; then
 
 	######## TO DO #########
 	echo "## TODO ##" > $TODO
-	find ${LOCAL_DIR} -type f -exec grep -H 'TODO:' {} \; 2> /dev/null | grep -v -e TODO.md -e README.md -e pre-commit | awk '{for (i=1; i<=NF-1; i++) $i = $(i+1); NF-=1; print}' >> $TODO
+	find ${LOCAL_DIR} -type f -exec grep -H 'TODO:' {} \; 2> /dev/null | grep -v -e TODO.md -e README.md -e pre-commit | awk '{for (i=1; i<=NF-1; i++) $i = $(i+1); NF-=1; print}' | sed -e "s/TODO:[ ${TAB}]*//" >> $TODO
 	echo "" >> $TODO
 
 	######## CHANGELOG #########
