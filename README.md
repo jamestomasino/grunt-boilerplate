@@ -1,4 +1,4 @@
-# Grunt Boilerplate #
+# Grunt Boilerplate [![Build Status](https://travis-ci.org/jamestomasino/grunt-boilerplate.png?branch=master)](https://travis-ci.org/jamestomasino/grunt-boilerplate)
 
 ## Overview ##
 
