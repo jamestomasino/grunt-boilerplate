@@ -14,13 +14,14 @@ if grunt lint; then
 	README="$LOCAL_DIR/README.md"
 	CHANGELOG="$LOCAL_DIR/CHANGELOG.md"
 	TODO="$LOCAL_DIR/TODO.md"
+	SRC="$LOCAL_DIR/sjs/core"
 
 	# Clear the contents from TO DO to the end of file and prepare for appending
-	sed -i "" -e '/##\ TODO\ ##/,$ d' $README
+	sed -i "" -e '/##\ TODO\ ##/,$ d' $README 2> /dev/null
 
 	######## TO DO #########
 	echo "## TODO ##" > $TODO
-	find ${LOCAL_DIR} -type f -exec grep -H 'TODO:' {} \; 2> /dev/null | grep -v -e TODO.md -e README.md -e pre-commit | awk '{for (i=1; i<=NF-1; i++) $i = $(i+1); NF-=1; print}' | sed -e "s/TODO:[ ${TAB}]*//" >> $TODO
+	find "${SRC}" -type f -exec grep -H 'TODO:' {} \; 2> /dev/null | grep -v -e TODO.md -e README.md -e pre-commit | awk '{for (i=1; i<=NF-1; i++) $i = $(i+1); NF-=1; print}' | sed -e "s/.*TODO:[ ${TAB}]*//" | sed -e "s/^/- /" >> $TODO 2> /dev/null
 	echo "" >> $TODO
 
 	######## CHANGELOG #########

@@ -27,23 +27,26 @@ module.exports = function(grunt) {
 			}
 		},
 		watch: {
-			scripts: {
+			options: {
+				livereload: true
+			},
+			html: {
+				files: ['*.html']
+			},
+			js: {
 				files: ['<%= jshint.files %>'],
 				tasks: ['jshint', 'qunit', 'snockets'],
+			},
+			sass: {
 				options: {
-					debounceDelay: 250,
-					livereload: true,
-					spawn: false
-				}
+					livereload: false
+				},
+				files: ['scss/**/*.scss', 'scss/**/*.sass', 'scss/**/*.css'],
+				tasks: ['compass:dev']
 			},
 			css: {
-				files: ['scss/**/*.scss', 'scss/**/*.sass', 'scss/**/*.css'],
-				tasks: ['compass:dev'],
-				options: {
-					debounceDelay: 250,
-					livereload: true,
-					spawn: false
-				}
+				files: ['css/**/*.css'],
+				tasks: []
 			}
 		},
 		meta: {
