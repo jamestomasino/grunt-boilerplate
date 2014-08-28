@@ -10,9 +10,13 @@ The grunt-boilerplate is a sample project with grunt automation tasks to serve a
 
 - *[nodejs](http://nodejs.org/)* - Use a package installer, homebrew, whatever
 - *grunt-cli* - `npm install -g grunt-cli`
+- Ruby - rvm, default system, or other
+- Compass - `gem install compass`
 - (Optional) *Live-Reload Plugin* - Update your browser on code changes
-	- [Chrome Plugin](https://chrome.google.com/webstore/detail/	jnihajbhpnppcggbcgedagnkighmdlei)
-	- [Safari Plugin](https://github.com/downloads/mockko/livereload/LiveReload-1.6.2.safariextz)
+	- [Chrome Plugin](https://chrome.google.com/webstore/detail/
+	  jnihajbhpnppcggbcgedagnkighmdlei)
+	- [Safari
+	  Plugin](https://github.com/downloads/mockko/livereload/LiveReload-1.6.2.safariextz)
 	- [Firefox Plugin](https://addons.mozilla.org/firefox/addon/livereload/)
 	- IE Plugin - Why are you developing in IE?
 
@@ -24,7 +28,7 @@ Standard:
 - Run `npm install` in the root folder
 - Run `grunt` once to set up all your hooks
 
-Or, to install all the node modules globally:
+Or, to install all the node modules globally (not recommended):
 
 - Clone the repo
 - Run `./setup_global` in the root folder
