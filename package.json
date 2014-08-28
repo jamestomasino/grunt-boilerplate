@@ -5,7 +5,7 @@
     "type": "git",
     "url": "https://github.com/jamestomasino/grunt-boilerplate"
   },
-  "version": "0.1.0",
+  "version": "0.1.1",
   "devDependencies": {
     "grunt-contrib-jshint": "~0.6.3",
     "grunt-contrib-uglify": "~0.2.2",
